@@ -1,18 +1,70 @@
+<!-- ============================ COMPONENT ================================= -->
+<section class="section-content padding-y bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 mb15">
+				<article class="card card-body">
+					<figure class="text-center">
+						<span class="rounded-circle icon-md bg-primary"><i
+								class="fa fa-money-bill-alt white"></i></span>
+						<figcaption class="pt-4">
+							<h5 class="title">Giá cả hợp lý</h5>
+							<p></p>
+						</figcaption>
+					</figure> <!-- iconbox // -->
+				</article> <!-- panel-lg.// -->
+			</div><!-- col // -->
+			<div class="col-md-3 mb15">
+				<article class="card card-body">
+					<figure class="text-center">
+						<span class="rounded-circle icon-md bg-danger"><i class="fa fa-truck white"></i></span>
+						<figcaption class="pt-4">
+							<h5 class="title">Chuyển phát nhanh</h5>
+						</figcaption>
+					</figure> <!-- iconbox // -->
+				</article> <!-- panel-lg.// -->
+			</div> <!-- col // -->
+			<div class="col-md-3 mb15">
+				<article class="card card-body">
+					<figure class="text-center">
+						<span class="rounded-circle icon-md bg-success"><i class="fa fa-star white"></i></span>
+						<figcaption class="pt-4">
+							<h5 class="title">Chiến lược sáng tạo</h5>
+						</figcaption>
+					</figure> <!-- iconbox // -->
+				</article> <!-- panel-lg.// -->
+			</div> <!-- col // -->
+			<div class="col-md-3 mb15">
+				<article class="card card-body">
+					<figure class="text-center">
+						<span class="rounded-circle icon-md bg-primary"><i class="fa fa-lock white"></i></span>
+						<figcaption class="pt-4">
+							<h5 class="title">Bảo mật cao </h5>
+						</figcaption>
+					</figure> <!-- iconbox // -->
+				</article> <!-- panel-lg.// -->
+			</div> <!-- col // -->
+		</div>
+	</div> <!-- container .//  -->
+</section>
+<!-- ============================ COMPONENT END .// ================================= -->
+
+
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y bg">
-<div class="container">
+	<div class="container">
 
-<div class="row">
-<div class="col-md-6">
-	<h3>Download app</h3>
-	<p>Tải xuống một ứng dụng tuyệt vời để giúp cuộc sống của bạn trở nên dễ dàng</p>
-</div>
-<div class="col-md-6 text-md-right">
-	<a href="#"><img src="images/misc/appstore.png" height="40"></a>
-	<a href="#"><img src="images/misc/appstore.png" height="40"></a>
-</div>
-</div> <!-- row.// -->
-</div><!-- container // -->
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Download app</h3>
+				<p>Tải xuống một ứng dụng tuyệt vời để giúp cuộc sống của bạn trở nên dễ dàng</p>
+			</div>
+			<div class="col-md-6 text-md-right">
+				<a href="#"><img src="images/misc/appstore.png" height="40"></a>
+				<a href="#"><img src="images/misc/appstore.png" height="40"></a>
+			</div>
+		</div> <!-- row.// -->
+	</div><!-- container // -->
 </section>
 <!-- ========================= SECTION  END// ======================= -->
 
@@ -47,7 +99,7 @@
 						<li> <a href="#">Hoàn tiền</a></li>
 						<li> <a href="#">Tình trạng đơn hàng</a></li>
 						<li> <a href="#">Thông tin vận chuyển</a></li>
-						
+
 					</ul>
 				</aside>
 				<aside class="col-md">
@@ -69,16 +121,16 @@
 					</ul>
 				</aside>
 			</div> <!-- row.// -->
-		</section>	<!-- footer-top.// -->
+		</section> <!-- footer-top.// -->
 
 		<section class="footer-bottom border-top row">
 			<div class="col-md-2">
-				<p class="text-muted"> &copy 2021  By NXC </p>
+				<p class="text-muted"> &copy 2021 By NXC </p>
 			</div>
 			<div class="col-md-8 text-md-center">
-				<span  class="px-2">nguyencanh@.io</span>
-				<span  class="px-2">+123-456-789</span>
-				<span  class="px-2">175 Tây Sơn, Đống Đa, Hà Nội</span>
+				<span class="px-2">nguyencanh@.io</span>
+				<span class="px-2">+123-456-789</span>
+				<span class="px-2">175 Tây Sơn, Đống Đa, Hà Nội</span>
 			</div>
 			<div class="col-md-2 text-md-right text-muted">
 				<i class="fab fa-lg fa-cc-visa"></i>
