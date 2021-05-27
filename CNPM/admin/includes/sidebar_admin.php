@@ -19,7 +19,7 @@
   </div>
   <!-- Nav Item - Pages Collapse Menu -->
   <li CLASS="nav-item">
-    <a CLASS="nav-link collapsed" href="index.php" target="iframe">
+    <a CLASS="nav-link collapsed" href="home.php" target="iframe">
       <i CLASS="fas fa-home"></i>
       <span>Trang chủ</span>
     </a>
@@ -32,8 +32,9 @@
     <div id="collapseTwo" CLASS="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div CLASS="bg-white py-2 collapse-inner rounded">
         <h6 CLASS="collapse-header">Chức năng</h6>
+        <a CLASS="collapse-item" href="ds_nv.php" target="iframe">Danh sách nhân viên</a>
         <a CLASS="collapse-item" href="#" target="iframe">Tạo tài khoản nhân viên</a>
-        <a CLASS="collapse-item" href="#" target="iframe">sửa thông tin tài khoản</a>
+        <a CLASS="collapse-item" href="#" target="iframe">Sửa thông tin tài khoản</a>
       </div>
     </div>
     
@@ -46,7 +47,8 @@
     <div id="collapseTwo1" CLASS="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div CLASS="bg-white py-2 collapse-inner rounded">
         <h6 CLASS="collapse-header">Chức năng</h6>
-        <a CLASS="collapse-item" href="#" target="iframe">Thêm sản phẩm</a>
+        <a CLASS="collapse-item" href="ds_sp.php" target="iframe">Danh sách sản phẩm</a>
+        <a CLASS="collapse-item" href="them_sp.php" target="iframe">Thêm sản phẩm</a>
         <a CLASS="collapse-item" href="#" target="iframe">Sửa sản phẩm</a>
         <a CLASS="collapse-item" href="#" target="iframe">Xóa sản phẩm</a>
       </div>
