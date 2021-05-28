@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 28, 2021 lúc 12:40 PM
+-- Thời gian đã tạo: Th5 28, 2021 lúc 05:59 PM
 -- Phiên bản máy phục vụ: 10.4.14-MariaDB
 -- Phiên bản PHP: 7.4.9
 
@@ -51,44 +51,42 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 
 CREATE TABLE `product` (
   `prd_id` int(11) NOT NULL,
-  `prd_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL,
-  `prd_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL,
-  `prd_price` int(11) NOT NULL,
-  `prd_featured` int(1) NOT NULL,
+  `cat_id` int(11) NOT NULL,
+  `prd_name` varchar(255) COLLATE utf8_unicode_520_ci NOT NULL,
+  `prd_image` varchar(255) COLLATE utf8_unicode_520_ci NOT NULL,
+  `prd_price` int(11) UNSIGNED NOT NULL,
   `prd_status` int(1) NOT NULL,
-  `prd_details` text CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL,
-  `cat_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `prd_featured` int(1) NOT NULL,
+  `prd_details` text COLLATE utf8_unicode_520_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`prd_id`, `prd_name`, `prd_image`, `prd_price`, `prd_featured`, `prd_status`, `prd_details`, `cat_id`) VALUES
-(0, '2323', 'asophoongdoi.png', 12345, 1, 1, '', 1),
-(1, 'Quần áo ngủ', 'bodongu.png', 120000, 1, 1, 'Bộ đồ cá tính với chất vải mêm mịn tạo cảm giác mát mẻ khi đi ngủ', 1),
-(2, 'Áo phông nam Trắng', 'aophongnamtrang.png', 135000, 1, 0, 'Bộ đồ cá tính với chất vải mêm mịn tạo cảm giác mát mẻ ', 1),
-(3, 'Áo thun nam đen', 'aophongnamden.png', 175000, 1, 1, 'Đẹp', 1),
-(4, 'Áo thun nam đỏ', 'aophongnamdo.png', 185000, 1, 1, 'Đẹp', 1),
-(5, 'Áo thun nam trắng', 'aophongnamtrang.png', 195000, 0, 0, 'Đẹp', 1),
-(6, 'Áo thun nam form rộng', 'aophongnamrong.png', 205000, 0, 0, 'Đẹp', 1),
-(7, 'Áo thun nam xanh', 'aophongnamxanh.png', 225000, 0, 0, 'Đẹp', 1),
-(8, 'Áo thun nữ đen', 'aothunnuden.png', 225000, 1, 0, 'Đẹp', 2),
-(9, 'Áo thun nữ hồng', 'aothunnuhong.png', 185000, 1, 1, 'Đẹp', 2),
-(10, 'Áo thun nữ kẻ sọc', 'aothunnusoc.png', 325000, 1, 1, 'Đẹp', 2),
-(11, 'Áo thun nữ trễ vai', 'aothunnubanhbeo.png', 335000, 1, 1, 'Đẹp', 2),
-(12, 'Đồng hồ Gold', 'donghobac.png', 655000, 1, 1, 'Đẹp', 4),
-(13, 'Đồng hồ nữ Hồng', 'donghohong.png', 455000, 1, 1, 'Đẹp', 4),
-(14, 'Đồng hồ thông minh ', 'donghongthongminh.png', 645000, 1, 1, 'Đẹp', 4),
-(15, 'Kính đa tròng ', 'kinhdatrong.png', 455000, 1, 1, 'Đẹp', 5),
-(16, 'Kính cận mắt tròn ', 'kinhmattron.png', 325000, 1, 1, 'Đẹp', 5),
-(17, 'Kính cận mắt tròn đen ', 'kinhmattronden.png', 345000, 1, 1, 'Đẹp', 5),
-(18, 'Kính cận mắt vuông', 'kinhvuong.png', 365000, 1, 1, 'Đẹp', 5),
-(19, 'Quần jogger nam', 'quanjogger.png', 455000, 1, 1, 'Đẹp', 1),
-(20, 'Quần jogger nữ ', 'quannujogger.png', 505000, 0, 1, 'Đẹp', 2),
-(21, 'Giày da Nam', 'giayda.png', 560000, 1, 1, 'Đẹp', 3),
-(22, 'Giày nữ', 'giaynu.png', 450000, 0, 0, 'Đẹp', 3),
-(23, 'Giày thể thao Nam', 'giaynamtheothao.png', 550000, 0, 1, 'Đẹp', 3);
+INSERT INTO `product` (`prd_id`, `cat_id`, `prd_name`, `prd_image`, `prd_price`, `prd_status`, `prd_featured`, `prd_details`) VALUES
+(2, 1, 'Áo phông nam Trắng', 'aophongnamtrang.png', 135000, 0, 1, 'Bộ đồ cá tính với chất vải mêm mịn tạo cảm giác mát mẻ '),
+(3, 1, 'Áo thun nam đen', 'aophongnamden.png', 175000, 1, 1, 'Đẹp'),
+(4, 1, 'Áo thun nam đỏ', 'aophongnamdo.png', 185000, 1, 1, 'Đẹp'),
+(5, 1, 'Áo thun nam trắng', 'aophongnamtrang.png', 195000, 0, 0, 'Đẹp'),
+(6, 1, 'Áo thun nam form rộng', 'aophongnamrong.png', 205000, 0, 0, 'Đẹp'),
+(7, 1, 'Áo thun nam xanh', 'aophongnamxanh.png', 225000, 0, 0, 'Đẹp'),
+(8, 2, 'Áo thun nữ đen', 'aothunnuden.png', 225000, 0, 1, 'Đẹp'),
+(9, 2, 'Áo thun nữ hồng', 'aothunnuhong.png', 185000, 1, 1, 'Đẹp'),
+(10, 2, 'Áo thun nữ kẻ sọc', 'aothunnusoc.png', 325000, 1, 1, 'Đẹp'),
+(11, 2, 'Áo thun nữ trễ vai', 'aothunnubanhbeo.png', 335000, 1, 1, 'Đẹp'),
+(12, 4, 'Đồng hồ Gold', 'donghobac.png', 655000, 1, 1, 'Đẹp'),
+(13, 4, 'Đồng hồ nữ Hồng', 'donghohong.png', 455000, 1, 1, 'Đẹp'),
+(14, 4, 'Đồng hồ thông minh ', 'donghongthongminh.png', 645000, 1, 1, 'Đẹp'),
+(15, 5, 'Kính đa tròng ', 'kinhdatrong.png', 455000, 1, 1, 'Đẹp'),
+(16, 5, 'Kính cận mắt tròn ', 'kinhmattron.png', 325000, 1, 1, 'Đẹp'),
+(17, 5, 'Kính cận mắt tròn đen ', 'kinhmattronden.png', 345000, 1, 1, 'Đẹp'),
+(18, 5, 'Kính cận mắt vuông', 'kinhvuong.png', 365000, 1, 1, 'Đẹp'),
+(19, 1, 'Quần jogger nam', 'quanjogger.png', 455000, 1, 1, 'Đẹp'),
+(20, 2, 'Quần jogger nữ ', 'quannujogger.png', 505000, 1, 0, 'Đẹp'),
+(21, 3, 'Giày da Nam', 'giayda.png', 560000, 1, 1, 'Đẹp'),
+(22, 3, 'Giày nữ', 'giaynu.png', 450000, 0, 0, 'Đẹp'),
+(23, 3, 'Giày thể thao Nam', 'giaynamtheothao.png', 550000, 1, 0, 'Đẹp');
 
 -- --------------------------------------------------------
 
@@ -109,9 +107,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_full`, `user_mail`, `user_pass`, `user_level`) VALUES
-(11, 'Admin', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1),
+(11, 'Admin', 'admin@gmail.com', '123456', 1),
 (12, 'Nhân viên 1', 'nhanvien1@gmail.com', '202cb962ac59075b964b07152d234b70', 2),
-(13, 'Nhân viên', 'nhanvien@gmail.com', '202cb962ac59075b964b07152d234b70', 2);
+(13, 'Nhân viên', 'nhanvien@gmail.com', '202cb962ac59075b964b07152d234b70', 2),
+(14, 'hilu', 'hiuhiu@gmail.com', '202cb962ac59075b964b07152d234b70', 3);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -148,10 +147,16 @@ ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT cho bảng `product`
+--
+ALTER TABLE `product`
+  MODIFY `prd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

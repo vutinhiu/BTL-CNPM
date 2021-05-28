@@ -25,7 +25,7 @@
             $prd_featured = 0;
         }
         $prd_details = $_POST['prd_details'];
-        $sql_update = "UPDATE product SET prd_name='$prd_name', prd_price='$prd_price',prd_image='$prd_image', cat_id=$cat_id, prd_status=$prd_status, prd_featured=$prd_featured WHERE prd_id=$prd_id";
+        $sql_update = "UPDATE product SET prd_name='$prd_name', prd_price='$prd_price', prd_image='$prd_image', cat_id=$cat_id, prd_status=$prd_status, prd_featured=$prd_featured WHERE prd_id=$prd_id";
         mysqli_query($conn,$sql_update);
         header("location: index.php?page_layout=product");
     }
@@ -35,7 +35,7 @@
 		<div class="row">
 			<ol class="breadcrumb">
                 <li><a href="index.php"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-                <li><a href="index.php?page_layout=product">Quản lý sản phẩm</a></li>
+                <li><a href="">Quản lý sản phẩm</a></li>
 				<li class="active"><?php echo $row['prd_name']; ?></li>
 			</ol>
 		</div><!--/.row-->
@@ -59,7 +59,7 @@
                                     <div class="form-group">
                                         <label>Giá sản phẩm</label>
                                         <input type="number" name="prd_price" required value="<?php echo $row['prd_price']; ?>" class="form-control">
-                                    </div>
+                                    </div>              
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -67,7 +67,7 @@
                                         <input type="file" name="prd_image">
                                         <br>
                                         <div>
-                                            <img src="img/nền.jpg">
+                                            <img src="img/download.jpeg">
                                         </div>
                                     </div>
                                     <div class="form-group">

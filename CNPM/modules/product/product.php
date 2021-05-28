@@ -1,7 +1,14 @@
 <!-- ========================= HEADER ========================= -->
-<?php include "includes/header.php" ?>
-<!-- ========================= HEADER END // ========================= -->
 
+<!-- ========================= HEADER END // ========================= -->
+<?php 
+    if(isset($_GET['prd_id'])){
+        $prd_id = $_GET['prd_id'];
+        $sql = "SELECT * FROM product WHERE prd_id = $prd_id";
+        $query = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($query);
+    }
+?>
 
 <section class="section-content padding-y bg">
     <div class="container">
@@ -12,20 +19,17 @@
                 <aside class="col-md-6">
                     <article class="gallery-wrap">
                         <div class="img-big-wrap">
-                            <div> <a href="#"><img src="images/items/1.jpg"></a></div>
+                            <div> <a href="#"><img src="admin/images/<?php echo $row['prd_image'];?>"></a></div>
                         </div> <!-- slider-product.// -->
                         <div class="thumbs-wrap">
-                            <a href="#" class="item-thumb"> <img src="images/items/1.jpg"></a>
-                            <a href="#" class="item-thumb"> <img src="images/items/1.jpg"></a>
-                            <a href="#" class="item-thumb"> <img src="images/items/1.jpg"></a>
-                            <a href="#" class="item-thumb"> <img src="images/items/1.jpg"></a>
+                        <div class="item-thumb"> <a href="#"><img src="admin/images/<?php echo $row['prd_image'];?>"></a></div>
                         </div> <!-- slider-nav.// -->
                     </article> <!-- gallery-wrap .end// -->
                 </aside>
                 <main class="col-md-6 border-left">
                     <article class="content-body">
 
-                        <h2 class="title">Off-White Odsy-1000 Low-Top Sneakers</h2>
+                        <h2 class="title"><?php echo $row['prd_name']?></h2>
 
                         <div class="rating-wrap my-3">
                             <ul class="rating-stars">
@@ -46,21 +50,19 @@
                         </div> <!-- rating-wrap.// -->
 
                         <div class="mb-3">
-                            <var class="price h4">$815.00</var>
-                            <span class="text-muted">/per kg</span>
+                            <var class="price h4"><?php echo $row['prd_price']?></var>
+                            <span class="text-muted">VNĐ</span>
                         </div> <!-- price-detail-wrap .// -->
 
-                        <p>Virgil Abloh’s Off-White is a streetwear-inspired collection that continues to break away
-                            from the conventions of mainstream fashion. Made in Italy, these black and brown Odsy-1000
-                            low-top sneakers.</p>
+                        <p><?php echo $row['prd_details']?></p>
 
 
                         <dl class="row">
-                            <dt class="col-sm-3">Model#</dt>
+                            <dt class="col-sm-3">Model</dt>
                             <dd class="col-sm-9">Odsy-1000</dd>
 
-                            <dt class="col-sm-3">Color</dt>
-                            <dd class="col-sm-9">Brown</dd>
+                            <!-- <dt class="col-sm-3">Color</dt>
+                            <dd class="col-sm-9">Brown</dd> -->
 
                             <dt class="col-sm-3">Delivery</dt>
                             <dd class="col-sm-9">Russia, USA, and Europe </dd>
