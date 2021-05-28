@@ -42,7 +42,7 @@
 				<a class="navbar-brand" href="#"><span>Shop</span>Quần áo</a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Admin
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> 
 						<?php 
 							echo $_SESSION['mail'];
 						?>
