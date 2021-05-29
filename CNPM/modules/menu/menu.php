@@ -9,26 +9,17 @@
         <!-- Navbar menu -->
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav">
+            <?php 
+               $sql = "SELECT * FROM category ORDER BY cat_id ASC";
+               $query = mysqli_query($conn,$sql);
+               while($row = mysqli_fetch_array($query)){
+            ?>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="index.php">Trang chủ</a>
+                    <a class="nav-link" href="index.php?page_layout=category&&cat_id=<?php echo $row['cat_id'];?>"><?php echo $row['cat_name'];?></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Thời trang nam</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Thời trang nữ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Giày thể thao</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Khác</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Đồng hồ</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Kính mắt</a>
-                    </div>
-                </li>
+                <?php
+               }
+               ?>
             </ul>
         </div> <!-- collapse .// -->
     </div> <!-- container .// -->

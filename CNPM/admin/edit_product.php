@@ -67,7 +67,7 @@
                                         <input type="file" name="prd_image">
                                         <br>
                                         <div>
-                                            <img src="img/download.jpeg">
+                                            <img src="img/products/<?php echo $row['prd_image'];?>">
                                         </div>
                                     </div>
                                     <div class="form-group">

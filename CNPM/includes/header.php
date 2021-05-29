@@ -89,7 +89,7 @@
                                     <span class="text-muted">Xin chào!</span>
                                     <div>
                                         <a href="login.php">Đăng nhập</a> |
-                                        <a href="register.php">Đăng ký</a>
+                                        <a href="index?page_layout=register">Đăng ký</a>
                                     </div>
                                 </div>
                             </div>

@@ -120,11 +120,14 @@
             case "category": include_once('modules/menu/category.php'); break;
             case "success": include_once('modules/cart/success.php'); break;
             case "search": include_once('modules/search/search.php'); break;
+			case "login": include_once('modules/login/login.php'); break;
+			case "register": include_once('modules/login/register.php'); break;
         }
-    }
-    
-    include_once('modules/product/featured.php');
-    include_once('modules/product/latest.php');
+    }else{
+		 
+		include_once('modules/product/featured.php');
+		include_once('modules/product/latest.php');
+	}
     ?>
 <!-- ========================= SECTION  END// ========================= -->
 <!-- ============================ COMPONENT ================================= -->

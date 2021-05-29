@@ -1,17 +1,13 @@
-<!-- ========================= HEADER ========================= -->
-<?php include "includes/header.php" ?>
-<!-- ========================= HEADER END // ========================= -->
-
 
 
 <!-- ========================= SECTION CONTENT ========================= -->
-<section class="section-conten padding-y" style="min-height:84vh">
+<section class="section-conten padding-y" style="min-height:84vh ">
 
     <!-- ============================ COMPONENT LOGIN   ================================= -->
-    <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
+    <div class="card mx-auto" style="max-width: 380px; margin-top:100px; text-align:center;">
         <div class="card-body">
             <h4 class="card-title mb-4">Đăng nhập</h4>
-            <form>
+            <form >
 
                 <div class="form-group">
                     <input name="" class="form-control" placeholder="Username" type="text">
@@ -48,11 +44,4 @@
 
 
 <!-- ========================= FOOTER ========================= -->
-<?php include "includes/footer.php" ?>
-<!-- ========================= FOOTER END // ========================= -->
 
-
-
-</body>
-
-</html>

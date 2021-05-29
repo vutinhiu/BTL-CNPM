@@ -9,7 +9,7 @@ if(isset($_POST['sbm'])){
     $prd_image = $_FILES['prd_image']['name'];
 
     if(($_FILES['prd_image']['type'] == 'image/jpg') || ($_FILES['prd_image']['type'] == 'image/png')){
-        if($_FILES['prd_image']['size'] > 1024000){
+        if($_FILES['prd_image']['size'] > 102400){
             $error = "Dung lượng quá 1MB, hãy upload lại !!!";
         }else{
             $url = "img/products/".$_FILES['prd_image']['name'];
