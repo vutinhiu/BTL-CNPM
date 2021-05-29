@@ -2,6 +2,7 @@
             <!--  XEM XÉT cột hàng bên trái -->
                 <nav class="card">
                     <ul class="menu-category">
+                    <li><a href="#">Danh mục</a></li>
                     <?php 
                $sql = "SELECT * FROM category ORDER BY cat_id ASC";
                $query = mysqli_query($conn,$sql);
