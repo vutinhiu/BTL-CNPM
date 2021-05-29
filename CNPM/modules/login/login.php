@@ -100,17 +100,7 @@
 
 
 </section>
-<?php 
-    session_start();
-    define('SECURITY', true);
-    include_once('config/connect.php');
-    if(isset($_SESSION['mail']) && isset($_SESSION['pass'])){
-        include_once('modules/login/ok.php');
-    }
-    else{
-        include_once('login.php');
-    }
-?>
+
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
 
