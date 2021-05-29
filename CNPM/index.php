@@ -95,20 +95,7 @@
     </header> <!-- section-header.// -->
 <?php include_once('modules/menu/menu.php');?>
 
-<!-- ========================= SECTION MAIN ========================= -->
-<section class="section-main bg padding-y">
-    <div class="container">
 
-        <div class="row">
-           <!-- menuleft -->
-           <?php
-           include_once('modules/menu/menuleft.php');
-           include_once('modules/banner/banner.php');
-           ?>
-        </div> <!-- row.// -->
-    </div> <!-- container //  -->
-</section>
-<!-- ========================= SECTION MAIN END// ========================= -->
 
 <!-- ========================= SECTION  ========================= -->
 <!--Product  -->
@@ -124,7 +111,7 @@
 			case "register": include_once('modules/login/register.php'); break;
         }
     }else{
-		 
+		include_once('modules/menu/menu2.php');
 		include_once('modules/product/featured.php');
 		include_once('modules/product/latest.php');
 	}
