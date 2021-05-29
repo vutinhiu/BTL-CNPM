@@ -39,7 +39,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="col-md-8">
-                            	<div class="alert alert-danger">Email đã tồn tại !</div>
+                            	<div class="alert alert-danger">Hãy thêm tài khoản mới</div>
                                 <form role="form" method="post">
                                 <div class="form-group">
                                     <label>Họ & Tên</label>

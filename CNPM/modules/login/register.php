@@ -21,25 +21,9 @@
                     </div> <!-- form-group end.// -->
                 </div> <!-- form-row end.// -->
                 <div class="form-group">
-                    <label>Số điện thoại</label>
-                    <input type="phone" class="form-control" placeholder="">
-                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div> <!-- form-group end.// -->
-                <div class="form-group">
                     <label>Email</label>
                     <input type="email" class="form-control" placeholder="">
                     <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div> <!-- form-group end.// -->
-                <div class="form-group">
-                    <label>Giới tính &nbsp</label>
-                    <label class="custom-control custom-radio custom-control-inline">
-                        <input class="custom-control-input" checked="" type="radio" name="gender" value="option1">
-                        <span class="custom-control-label"> Nam </span>
-                    </label>
-                    <label class="custom-control custom-radio custom-control-inline">
-                        <input class="custom-control-input" type="radio" name="gender" value="option2">
-                        <span class="custom-control-label"> Nữ </span>
-                    </label>
                 </div> <!-- form-group end.// -->
                 <div class="form-group">
                     <label>Địa chỉ</label>
@@ -68,7 +52,7 @@
             </form>
         </article><!-- card-body.// -->
     </div> <!-- card .// -->
-    <p class="text-center mt-4">Đã có tài khoản? <a href="login.php">Đăng nhập</a></p>
+    <p class="text-center mt-4">Đã có tài khoản? <a href="index.php?page_layout=login">Đăng nhập</a></p>
     <br><br>
     <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
 

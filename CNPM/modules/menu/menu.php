@@ -9,12 +9,6 @@
         <!-- Navbar menu -->
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav">
-                    <a class="nav-link" href="index.php">Trang chủ</a>
-                </ul>
-            <ul class="navbar-nav">
-                    <a class="nav-link" href="#">Giới thiệu</a>
-                </ul>
-            <ul class="navbar-nav">
             <?php 
                $sql = "SELECT * FROM category ORDER BY cat_id ASC";
                $query = mysqli_query($conn,$sql);
@@ -27,9 +21,6 @@
                }
                ?>
             </ul>
-            <ul class="navbar-nav">
-                    <a class="nav-link" href="#">Liên hệ</a>
-                </ul>
         </div> <!-- collapse .// -->
     </div> <!-- container .// -->
 </nav>
