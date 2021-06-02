@@ -83,6 +83,7 @@
                         <!-- Cart -->
                         <?php include_once('modules/cart/cartt.php');
                             include_once('modules/login/member.php');
+					
                         ?>
                             <!--  login -->
 
@@ -95,7 +96,20 @@
     </header> <!-- section-header.// -->
 <?php include_once('modules/menu/menu.php');?>
 
+<!-- ========================= SECTION MAIN ========================= -->
+<section class="section-main bg padding-y">
+    <div class="container">
 
+        <div class="row">
+           <!-- menuleft -->
+           <?php
+           include_once('modules/menu/menuleft.php');
+           include_once('modules/banner/banner.php');
+           ?>
+        </div> <!-- row.// -->
+    </div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION MAIN END// ========================= -->
 
 <!-- ========================= SECTION  ========================= -->
 <!--Product  -->
@@ -109,9 +123,11 @@
             case "search": include_once('modules/search/search.php'); break;
 			case "login": include_once('modules/login/login.php'); break;
 			case "register": include_once('modules/login/register.php'); break;
-        }
+			case "logout": include_once('modules/login/logout.php'); break;
+			case "ok": include_once('modules/login/ok.php'); break;
+		}
     }else{
-		include_once('modules/menu/menu2.php');
+		 
 		include_once('modules/product/featured.php');
 		include_once('modules/product/latest.php');
 	}

@@ -1,20 +1,30 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-<ul class="user-menu">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
-						<?php 
-							echo $_SESSION['mail'];
-						?>
-						<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Hồ sơ</a></li>
-							<li><a href="index.php?page_layout=logout"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Đăng xuất</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>			
-		</div><!-- /.container-fluid -->
-	</nav>
-		
+
+<div class="container">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="col-md-8">
+							<div class="alert alert-danger">Đây là tài khoản thông tin của bạn!</div>
+						<form role="form" method="post">
+							<div class="form-group">
+								<label>Họ & Tên</label>
+								<input type="text" name="user_full" required class="form-control" value="" placeholder="">
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input type="text" name="user_mail" required value="" class="form-control">
+							</div>                       
+							<div class="form-group">
+								<label>Mật khẩu</label>
+								<input type="password" name="user_pass" required  class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Nhập lại mật khẩu</label>
+								<input type="password" name="user_re_pass" required  class="form-control">
+							</div>
+							<button type="submit" name="sbm" class="btn btn-primary">Cập nhật</button>
+							<button type="reset" class="btn btn-default">Làm mới</button>
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>

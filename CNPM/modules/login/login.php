@@ -14,51 +14,13 @@
         if($row){
             $_SESSION['mail'] = $mail;
             $_SESSION['pass'] = $pass;
-            header(include_once('modules/login/memner.php'));
+            header("location:index.php?page_layout=ok");
         }
         else{
             $erorr = '<div class="alert alert-danger">Tài khoản không hợp lệ !</div>';
         }
     }
   ?>
-    <!-- <div class="card mx-auto" style="max-width: 380px; margin-top:100px; text-align:center;">
-        <div class="card-body">
-            <h4 class="card-title mb-4">Đăng nhập</h4>
-            <?php 
-						if(isset($erorr)){
-							echo $erorr;
-						}
-					?>
-            <form role="form" method="post">
-            <fieldset>
-                <div class="form-group">
-                    <input name="" class="form-control" placeholder="E-mail" type="email"name="mail"
-                    autofocus>
-                </div> 
-                <div class="form-group">
-                    <input name="" class="form-control" placeholder="Password" type="password"name="pass" value="">
-                </div>
-
-                <div class="form-group">
-                    <a href="#" class="float-right">Quên mật khẩu?</a>
-                    <label class="float-left custom-control custom-checkbox"> <input type="checkbox"
-                            class="custom-control-input" checked="">
-                            <div class="checkbox">
-								<label>
-									<input name="remember" type="checkbox" value="Remember Me">Nhớ tài khoản
-								</label>
-							</div>
-                    </label>
-                </div> 
-                <button type="submit" class="btn btn-primary btn-block"name="sbm"> Đăng nhập </button>
-            </fieldset>
-                <a href="#" class="btn btn-facebook btn-block mb-2"> <i class="fab fa-facebook-f"></i> &nbsp Sign in
-                    with Facebook</a>
-                <a href="#" class="btn btn-google btn-block mb-4"> <i class="fab fa-google"></i> &nbsp Sign in with
-                    Google</a>
-            </form>
-        </div> 
-    </div>  -->
     <div class="card mx-auto" style="max-width: 380px; margin-top:100px; text-align:center;">
 		<div class="text-center mt-4">
 			<div class="login-panel panel panel-default">
