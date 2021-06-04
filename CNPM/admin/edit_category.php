@@ -2,12 +2,12 @@
     if(isset($_GET['cat_id'])){
         $cat_id = $_GET['cat_id'];
     }
-    $sql="SELECT * FROM category WHERE cat_id = $cat_id";
+    $sql="SELECT * FROM product WHERE cat_id = $cat_id";
     $query=mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($query);
     if(isset($_POST['sbm'])){
         $cat_name = $_POST['cat_name'];
-        $sql_update = "UPDATE category SET cat_name = '$cat_name' WHERE cat_id = $cat_id";
+        $sql_update = "UPDATE product SET cat_name = '$cat_name' WHERE cat_id = $cat_id";
         mysqli_query($conn,$sql_update);
         header("location: index.php?page_layout=category");
     }

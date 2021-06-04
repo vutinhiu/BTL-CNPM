@@ -1,5 +1,5 @@
 <?php 
-    if(isset($_POST['sbm'])){
+     if(isset($_POST['sbm'])){
         $cus_name = $_POST['cus_name'];
         $cus_mail = $_POST['cus_mail'];
         $cus_pass = md5($_POST['cus_pass']);

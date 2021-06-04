@@ -92,15 +92,11 @@
                                                 echo "danger";
                                             }elseif($row['user_level'] == 2){
                                                 echo "warning";
-                                            }else{
-                                                echo "primary";
                                             }?>"><?php 
                                             if($row['user_level'] == 1){
                                                 echo "Admin";
                                             }elseif($row['user_level']==2){
                                                 echo "Manager";
-                                            }else{
-                                                echo "Member";
                                             } ?>
                                             </span>
                                         </td>

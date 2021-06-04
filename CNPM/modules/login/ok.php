@@ -7,7 +7,7 @@
 						<form role="form" method="post">
 							<div class="form-group">
 								<label>Họ & Tên</label>
-								<input type="text" name="cus_name" required class="form-control" value="" placeholder="">
+								<input type="text" name="cus_name" required class="form-control" value="<?php echo $row['cus_name'] ?>" placeholder="">
 							</div>
 							<div class="form-group">
 								<label>Email</label>
