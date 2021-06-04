@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 02, 2021 lúc 05:34 AM
+-- Thời gian đã tạo: Th6 04, 2021 lúc 03:40 AM
 -- Phiên bản máy phục vụ: 10.4.14-MariaDB
 -- Phiên bản PHP: 7.4.9
 
@@ -31,17 +31,28 @@ CREATE TABLE `category` (
   `cat_id` int(11) NOT NULL,
   `cat_name` varchar(255) COLLATE utf8_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+-- Error reading data for table btl_cnpm.category: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `btl_cnpm`.`category`' at line 1
+
+-- --------------------------------------------------------
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Cấu trúc bảng cho bảng `customer`
 --
 
-INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
-(4, 'Đồng hồ '),
-(3, 'Giày thể thao'),
-(5, 'Kính mắt'),
-(1, 'Thời trang Nam'),
-(2, 'Thời trang Nữ');
+CREATE TABLE `customer` (
+  `cus_id` int(11) NOT NULL,
+  `cus_name` varchar(255) COLLATE utf8_unicode_520_ci NOT NULL,
+  `cus_mail` varchar(255) COLLATE utf8_unicode_520_ci NOT NULL,
+  `cus_pass` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `customer`
+--
+
+INSERT INTO `customer` (`cus_id`, `cus_name`, `cus_mail`, `cus_pass`) VALUES
+(1, 'Vũ Tiến Hiệu', 'hieu@gmail.com', 202),
+(3, 'Canh ', 'canh@gmail.com', 202);
 
 -- --------------------------------------------------------
 
@@ -111,7 +122,8 @@ INSERT INTO `user` (`user_id`, `user_full`, `user_mail`, `user_pass`, `user_leve
 (12, 'Nhân viên 12', 'nhanvien1@gmail.com', '123', 2),
 (13, 'Nhân viên', 'nhanvien@gmail.com', '202cb962ac59075b964b07152d234b70', 2),
 (14, 'hilu', 'hiuhiu@gmail.com', '123456', 3),
-(17, 'vutinhiu1', 'hiuhiu2@gmail.com', '202cb962ac59075b964b07152d234b70', 3);
+(17, 'vutinhiu1', 'hiuhiu2@gmail.com', '202cb962ac59075b964b07152d234b70', 3),
+(18, 'vutinhiu', 'hiuhiu1@gmail.com', '123', 3);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -123,6 +135,12 @@ INSERT INTO `user` (`user_id`, `user_full`, `user_mail`, `user_pass`, `user_leve
 ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`),
   ADD UNIQUE KEY `cat_name` (`cat_name`);
+
+--
+-- Chỉ mục cho bảng `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`cus_id`);
 
 --
 -- Chỉ mục cho bảng `product`
@@ -157,7 +175,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
