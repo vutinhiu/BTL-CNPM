@@ -25,30 +25,18 @@ if(!defined('SECURITY')){
 
 <body>
 	<?php 
-		// include_once('config/connect.php');
-		
-        // while($row = mysqli_result{
-		// 	if(isset($_POST['sbm'])){
-		// 		$mail = $_POST['mail'];
-		// 		$pass = $_POST['pass'];
-		// 		if($row['usermail']== $mail && $row['pass'] == $pass){
-		// 			header("location: index.php");
-		// 		}
-		// 		else{
-		// 			$erorr = '<div class="alert alert-danger">Tài khoản không hợp lệ !</div>';
-		// 		}
-		// 	}	
-        // }
-
 		if(isset($_POST['sbm'])){
 			$mail = $_POST['mail'];
 			$pass = md5($_POST['pass']);
 			$sql = "SELECT * from user where user_mail = '$mail' AND user_pass = '$pass'";
 			$query = mysqli_query($conn,$sql);
+			$user=mysqli_fetch_array($query);
+		
 			$row = mysqli_num_rows($query);
 			if($row){
 				$_SESSION['mail'] = $mail;
 				$_SESSION['pass'] = $pass;
+				$_SESSION['level']=$user['user_level'];
 				header("location: index.php");
 			}
 			else{

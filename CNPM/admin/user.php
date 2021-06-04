@@ -51,7 +51,7 @@
             <h1 class="page-header">Danh sách thành viên</h1>
         </div>
     </div><!--/.row-->
-    <?php if($user['user_level'] != 3){ ?>
+    <?php if($_SESSION['level'] == 1){ ?>
         <div id="toolbar" class="btn-group">
             <a href="index.php?page_layout=add_user" class="btn btn-success">
                 <i class="glyphicon glyphicon-plus"></i> Thêm thành viên
@@ -71,10 +71,13 @@
                             <th data-field="name"  data-sortable="true">Họ & Tên</th>
                             <th data-field="price" data-sortable="true">Email</th>
                             <th>Quyền</th>
-                            <?php if($user['user_level'] == 3){ ?>
+                            <th>Hành động</th>
+                            <?php if($_SESSION['level'] == 1){ ?>
                                 <th>Hành động</th>
                             <?php } ?>
-                            <th>Hành động</th>
+                           
+                           
+                            
                         </tr>
                         </thead>
                         <tbody>
@@ -100,10 +103,12 @@
                                             } ?>
                                             </span>
                                         </td>
+                                        <?php if($_SESSION['level'] == 1){ ?>
                                         <td class="form-group">
                                             <a href="index.php?page_layout=edit_user&&user_id=<?php echo $row['user_id']; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
                                             <a href="del_user.php?user_id=<?php echo $row['user_id']; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                                         </td>
+                                      <?php } ?>
                                     </tr>
                             <?php        
                                 } 

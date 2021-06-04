@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 04, 2021 lúc 05:52 AM
+-- Thời gian đã tạo: Th6 04, 2021 lúc 02:53 PM
 -- Phiên bản máy phục vụ: 10.4.14-MariaDB
 -- Phiên bản PHP: 7.4.9
 
@@ -132,8 +132,7 @@ INSERT INTO `user` (`user_id`, `user_full`, `user_mail`, `user_pass`, `user_leve
 (11, 'Admin', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1),
 (12, 'Nhân viên 12', 'nhanvien1@gmail.com', '123', 2),
 (13, 'Nhân viên', 'nhanvien@gmail.com', '202cb962ac59075b964b07152d234b70', 2),
-(14, 'hilu', 'hiuhiu@gmail.com', '123', 2),
-(19, 'vutinhiu', '123@gmail.com', '123', 2);
+(14, 'hilu', 'hiuhiu@gmail.com', '123', 2);
 
 --
 -- Chỉ mục cho các bảng đã đổ
