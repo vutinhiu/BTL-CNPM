@@ -5,7 +5,7 @@
         $cus_pass = md5($_POST['cus_pass']);
         $cus_re_pass = md5($_POST['cus_re_pass']);
         if($cus_pass===$cus_re_pass){
-            $sql = "INSERT INTO cus (cus_name, cus_mail, cus_pass) VALUES ('$cus_name','$cus_mail','$cus_pass')";
+            $sql = "INSERT INTO customer (cus_name, cus_mail, cus_pass) VALUES ('$cus_name','$cus_mail','$cus_pass')";
             $query = mysqli_query($conn,$sql);
             header("location: index.php?page_layout=login");
         }else{
