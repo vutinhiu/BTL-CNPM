@@ -8,18 +8,19 @@
       if(isset($_POST['sbm'])){
         $mail = $_POST['mail'];
         $pass = md5($_POST['pass']);
-        $sql = "SELECT * from user where user_mail = '$mail' AND user_pass = '$pass'";
+        $sql = "SELECT * from customer where cus_mail = '$mail' AND cus_pass = '$pass'";
         $query = mysqli_query($conn,$sql);
         $row = mysqli_num_rows($query);
         if($row){
             $_SESSION['mail'] = $mail;
             $_SESSION['pass'] = $pass;
-            header("location:index.php?page_layout=ok");
+            header("location:index.php");
         }
         else{
             $erorr = '<div class="alert alert-danger">Tài khoản không hợp lệ !</div>';
         }
     }
+ 
   ?>
     <div class="card mx-auto" style="max-width: 380px; margin-top:100px; text-align:center;">
 		<div class="text-center mt-4">

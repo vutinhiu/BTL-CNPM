@@ -56,6 +56,19 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large"><?php echo mysqli_num_rows(mysqli_query($conn, $sql.'customer')); ?></div>
+							<div class="text-muted">Khách hàng</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
 				<div class="panel panel-red panel-widget">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-5 widget-left">

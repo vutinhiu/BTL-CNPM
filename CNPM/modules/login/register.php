@@ -1,14 +1,13 @@
 <?php 
     if(isset($_POST['sbm'])){
-        $user_full = $_POST['user_full'];
-        $user_mail = $_POST['user_mail'];
-        $user_pass = md5($_POST['user_pass']);
-        $user_re_pass = md5($_POST['user_re_pass']);
-        $user_level = $_POST['user_level'];
-        if($user_pass===$user_re_pass){
-            $sql = "INSERT INTO user (user_full, user_mail, user_pass, user_level) VALUES ('$user_full','$user_mail','$user_pass', $user_level)";
+        $cus_name = $_POST['cus_name'];
+        $cus_mail = $_POST['cus_mail'];
+        $cus_pass = md5($_POST['cus_pass']);
+        $cus_re_pass = md5($_POST['cus_re_pass']);
+        if($cus_pass===$cus_re_pass){
+            $sql = "INSERT INTO cus (cus_name, cus_mail, cus_pass) VALUES ('$cus_name','$cus_mail','$cus_pass')";
             $query = mysqli_query($conn,$sql);
-            header("location: index.php?page_layout=user");
+            header("location: index.php?page_layout=login");
         }else{
 			echo '<script language="javascript">';
 			echo 'alert("Mật khẩu không khớp! Hãy nhập lại")';
@@ -32,19 +31,19 @@
                                 <form role="form" method="post">
                                 <div class="form-group">
                                     <label>Họ & Tên</label>
-                                    <input name="user_full" required class="form-control" placeholder="">
+                                    <input name="cus_name" required class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input name="user_mail" required type="text" class="form-control">
+                                    <input name="cus_mail" required type="text" class="form-control">
                                 </div>                       
                                 <div class="form-group">
                                     <label>Mật khẩu</label>
-                                    <input name="user_pass" required type="password"  class="form-control">
+                                    <input name="cus_pass" required type="password"  class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Nhập lại mật khẩu</label>
-                                    <input name="user_re_pass" required type="password"  class="form-control">
+                                    <input name="cus_re_pass" required type="password"  class="form-control">
                                 </div>
                                 <button name="sbm" type="submit" class="btn btn-primary">Đăng ký </button>
                             </div>
