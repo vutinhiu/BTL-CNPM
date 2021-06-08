@@ -104,8 +104,8 @@
                             </div> <!-- col.// -->
                         </div> <!-- row.// -->
 
-                        <a href="#" class="btn  btn-primary"> Buy now </a>
-                        <a href="#" class="btn  btn-outline-primary"> <span class="text">Add to cart</span> <i
+                        <a href="modules/cart/cart_add.php?prd_id=<?php echo $row['prd_id'];?>" class="btn  btn-primary"> Mua ngay </a>
+                        <a href="modules/cart/cart_add.php?prd_id=<?php echo $row['prd_id'];?>" class="btn  btn-outline-primary"> <span class="text">Add to cart</span> <i
                                 class="fas fa-shopping-cart"></i> </a>
                     </article> <!-- product-info-aside .// -->
                 </main> <!-- col.// -->

@@ -24,7 +24,7 @@
     <!-- Bootstrap4 files-->
     <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-
+	<link rel="stylesheet" href="css/success.css">
     <!-- Font awesome 5 -->
     <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
 
@@ -75,7 +75,7 @@
                     <!-- Search -->
                   <!-- col.// -->
                   <?php
-                    include_once('modules/search/search.php');
+                    include_once('modules/search/search_box.php');
                     
                   ?>
                     <div class="col-lg-4 col-sm-6 col-8">
@@ -112,6 +112,7 @@
 			case "register": include_once('modules/login/register.php'); break;
 			case "logout": include_once('modules/login/logout.php'); break;
 			case "ok": include_once('modules/login/ok.php'); break;
+			case "search": include_once('modules/search/search.php'); break;
 		}
     }else{
 		include_once('modules/menu/menu2.php');
