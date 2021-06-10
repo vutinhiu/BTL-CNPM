@@ -78,8 +78,38 @@
                                         <td style=""><?php echo $row['cus_mail']; ?></td>
                                        
                                         <td class="form-group">
-                                            
-                                            <a href="del_customer.php?cus_id=<?php echo $row['cus_id']; ?>" class="btn btn-danger">Xoá<i class="glyphicon glyphicon-remove"></i></a>
+                                        <a type="button" class="btn btn-danger" data-toggle="modal" data-href-id="del_customer.php?cus_id=<?php echo $row['cus_id'];?> "data-name-id="Tài khoản : <?php echo $row['cus_name'];?> "data-target="#confirmDialod" style="border:none; outline:none;">
+                                        <i class="glyphicon glyphicon-remove border-0"></i>
+                                    </a>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="confirmDialod" tabindex="-1" role="dialog"
+                                        aria-labelledby="confirmDialodTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document"
+                                            style="background-color: #fff;">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="confirmDialodTitle"></h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                Bạn chắc chắn muốn xóa tài khoản này không?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" type="button" class="btn btn-primary" id="deletes">Có</a>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                                                <script>
+                                                    $('#confirmDialod').on('show.bs.modal', function (e) {
+                                                        var nameProduct = $(e.relatedTarget).data('name-id'); //lấy dữ liệu truyền vào từ data-name-id của thẻ html
+                                                        document.getElementById('confirmDialodTitle')
+                                                            .innerHTML = nameProduct; //gán giá trị vào thẻ html có id tương ứng
+                                                        var hrefDelete = $(e.relatedTarget).data('href-id');//lấy dữ liệu truyền vào từ data-href-id của thẻ html
+                                                        $('#deletes').attr('href', hrefDelete); // truyền dữ liệu vào thuộc tính href của thẻ có id là deletes
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        </td>
+                                    </tr>
                                         </td>
                                     </tr>
                             <?php        

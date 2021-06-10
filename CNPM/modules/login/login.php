@@ -5,15 +5,15 @@
 
     <!-- ============================ COMPONENT LOGIN   ================================= -->
   <?php
-      if(isset($_POST['sbm'])){
-        $mail = $_POST['mail'];
-        $pass = md5($_POST['pass']);
-        $sql = "SELECT * from customer where cus_mail = '$mail' AND cus_pass = '$pass'";
+      if(isset($_POST['sbm1'])){
+        $mail1 = $_POST['mail1'];
+        $pass1 = md5($_POST['pass1']);
+        $sql = "SELECT * from customer where cus_mail = '$mail1' AND cus_pass = '$pass1'";
         $query = mysqli_query($conn,$sql);
         $row = mysqli_num_rows($query);
         if($row){
-            $_SESSION['mail'] = $mail;
-            $_SESSION['pass'] = $pass;
+            $_SESSION['mail1'] = $mail1;
+            $_SESSION['pass1'] = $pass1;
             header("location:index.php");
         }
         else{
@@ -35,10 +35,10 @@
 					<form role="form" method="post">
 						<fieldset>
 							<div class="form-group">
-								<input class="form-control" placeholder="E-mail" name="mail" type="email" autofocus>
+								<input class="form-control" placeholder="E-mail" name="mail1" type="email" autofocus>
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Mật khẩu" name="pass" type="password" value="">
+								<input class="form-control" placeholder="Mật khẩu" name="pass1" type="password" value="">
 							</div>
 							<div class="checkbox">
 								<label>
@@ -46,7 +46,7 @@
 								</label>
                                 <a href="#" class="float-right">Quên mật khẩu?</a>
 							</div>
-							<button type="submit" name="sbm" class="btn btn-primary">Đăng nhập</button>
+							<button type="submit" name="sbm1" class="btn btn-primary">Đăng nhập</button>
 						</fieldset>
 					</form>
 				</div>

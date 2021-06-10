@@ -26,16 +26,16 @@ if(!defined('SECURITY')){
 <body>
 	<?php 
 		if(isset($_POST['sbm'])){
-			$mail = $_POST['mail'];
-			$pass = md5($_POST['pass']);
-			$sql = "SELECT * from user where user_mail = '$mail' AND user_pass = '$pass'";
+			$mail2 = $_POST['mail2'];
+			$pass2 = md5($_POST['pass2']);
+			$sql = "SELECT * from user where user_mail = '$mail2' AND user_pass = '$pass2'";
 			$query = mysqli_query($conn,$sql);
 			$user=mysqli_fetch_array($query);
 		
 			$row = mysqli_num_rows($query);
 			if($row){
-				$_SESSION['mail'] = $mail;
-				$_SESSION['pass'] = $pass;
+				$_SESSION['mail2'] = $mail2;
+				$_SESSION['pass2'] = $pass2;
 				$_SESSION['level']=$user['user_level'];
 				header("location: index.php");
 			}
@@ -66,10 +66,10 @@ if(!defined('SECURITY')){
 					<form role="form" method="post">
 						<fieldset>
 							<div class="form-group">
-								<input class="form-control" placeholder="E-mail" name="mail" type="email" autofocus>
+								<input class="form-control" placeholder="E-mail" name="mail2" type="email" autofocus>
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Mật khẩu" name="pass" type="password" value="">
+								<input class="form-control" placeholder="Mật khẩu" name="pass2" type="password" value="">
 							</div>
 							<div class="checkbox">
 								<label>
