@@ -62,7 +62,6 @@
                                     <select name="user_level" class="form-control">
                                         <option value=1>Admin</option>
                                         <option value=2>Manager</option>
-                                      
                                     </select>
                                 </div>
                                 <button name="sbm" type="submit" class="btn btn-success">Thêm mới</button>

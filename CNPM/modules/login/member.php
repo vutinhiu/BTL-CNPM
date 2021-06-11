@@ -20,6 +20,7 @@ if(isset($_SESSION['mail1']) && isset($_SESSION['pass1'])){
   <?php 
 
 if(isset($_SESSION['mail1']) && isset($_SESSION['pass1'])){
+  
     echo $_SESSION['mail1'];
 }
 
@@ -28,7 +29,7 @@ if(isset($_SESSION['mail1']) && isset($_SESSION['pass1'])){
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   <?php
-  $sql = "SELECT * FROM customer ORDER BY cus_id ";
+  $sql = "SELECT * FROM customer WHERE cus_id ";
   $query = mysqli_query($conn,$sql);
   $row = mysqli_fetch_array($query);
 ?>

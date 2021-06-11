@@ -28,14 +28,14 @@
         }else{
             $active = '';
         }
-        $list_page .= '<li class="page-item '.$active.'"><a class="page-link" href="index.php?page_layout=cutomer&&page='.$i.'">'.$i.'</a></li>';
+        $list_page .= '<li class="page-item '.$active.'"><a class="page-link" href="index.php?page_layout=customer&&page='.$i.'">'.$i.'</a></li>';
     }
 
     $page_next = $page + 1;
     if($page_next >= $total_page){
         $page_next = $total_page;
     }
-    $list_page .= '<li class="page-item"><a class="page-link" href="index.php?page_layout=customer&page='.$page_next.'">&raquo;</a></li>';
+    $list_page .= '<li class="page-item"><a class="page-link" href="index.php?page_layout=user&page='.$page_next.'">&raquo;</a></li>';
 ?>
 		
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			

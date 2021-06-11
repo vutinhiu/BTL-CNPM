@@ -1,4 +1,5 @@
 <?php
+if(isset($_SESSION['mail1']) && isset($_SESSION['pass1'])){
 	if(isset($_GET['cus_id'])){
 		$cus_id = $_GET['cus_id'];
 		$sql = "SELECT * FROM customer WHERE cus_id = $cus_id";
@@ -20,6 +21,7 @@
 			echo '</script>';
 		}
 	}
+}
 ?>
 <div class="container">
 				<div class="panel panel-default">
@@ -29,11 +31,11 @@
 						<form role="form" method="post">
 							<div class="form-group">
 								<label>Họ & Tên</label>
-								<input type="text" name="cus_name" required class="form-control" value="<?php echo $row['cus_name'] ?>" placeholder="">
+								<input type="text" name="cus_name" required class="form-control" value="" placeholder="">
 							</div>
 							<div class="form-group">
 								<label>Email</label>
-								<input type="text" name="cus_mail" required value="<?php echo $row['cus_mail']?>" class="form-control">
+								<input type="email" name="cus_mail" required value="" class="form-control" autofocus>
 							</div>                       
 							<div class="form-group">
 								<label>Mật khẩu</label>
